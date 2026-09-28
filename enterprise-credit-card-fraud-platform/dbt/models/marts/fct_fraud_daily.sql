@@ -1,0 +1,1 @@
+select date_trunc('day', ingested_at) as date, count(*) as transactions, sum(is_fraud) as frauds, avg(is_fraud::numeric) as fraud_rate from {{ ref('stg_transactions') }} group by 1

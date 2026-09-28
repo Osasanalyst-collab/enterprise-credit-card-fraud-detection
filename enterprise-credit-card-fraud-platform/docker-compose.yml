@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: fraud_detection
+      POSTGRES_USER: fraud_app
+      POSTGRES_PASSWORD: fraud_password
+    ports: ["5432:5432"]
+    volumes: ["postgres_data:/var/lib/postgresql/data"]
+  api:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/api.Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg://fraud_app:fraud_password@postgres:5432/fraud_detection
+      API_KEY: change-me
+    ports: ["8000:8000"]
+    depends_on: [postgres]
+volumes:
+  postgres_data:

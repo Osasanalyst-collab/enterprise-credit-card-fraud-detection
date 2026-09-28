@@ -1,0 +1,1 @@
+SELECT type, COUNT(*) transactions, SUM(is_fraud) frauds, AVG(is_fraud::numeric) fraud_rate FROM silver.transactions_clean GROUP BY type ORDER BY fraud_rate DESC;

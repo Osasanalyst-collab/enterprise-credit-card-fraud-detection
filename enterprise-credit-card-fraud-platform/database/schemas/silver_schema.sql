@@ -1,0 +1,1 @@
+CREATE SCHEMA IF NOT EXISTS silver; CREATE TABLE IF NOT EXISTS silver.transactions_clean (LIKE bronze.transactions_raw INCLUDING DEFAULTS);

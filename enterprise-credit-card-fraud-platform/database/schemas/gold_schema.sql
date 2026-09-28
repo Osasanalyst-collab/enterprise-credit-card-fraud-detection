@@ -1,0 +1,1 @@
+CREATE SCHEMA IF NOT EXISTS gold; CREATE TABLE IF NOT EXISTS gold.fraud_predictions (transaction_id TEXT, fraud_probability DOUBLE PRECISION, prediction SMALLINT, risk_level TEXT, decision TEXT, model_version TEXT, predicted_at TIMESTAMPTZ DEFAULT now());

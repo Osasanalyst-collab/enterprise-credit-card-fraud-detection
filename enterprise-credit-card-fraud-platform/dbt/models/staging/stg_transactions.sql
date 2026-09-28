@@ -1,0 +1,1 @@
+select * from {{ source('bronze','transactions_raw') }} where amount >= 0

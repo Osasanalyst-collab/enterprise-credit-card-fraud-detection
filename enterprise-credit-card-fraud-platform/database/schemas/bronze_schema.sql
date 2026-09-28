@@ -1,0 +1,1 @@
+CREATE SCHEMA IF NOT EXISTS bronze; CREATE TABLE IF NOT EXISTS bronze.transactions_raw (step BIGINT, type TEXT, amount NUMERIC, name_orig TEXT, old_balance_orig NUMERIC, new_balance_orig NUMERIC, name_dest TEXT, old_balance_dest NUMERIC, new_balance_dest NUMERIC, is_fraud SMALLINT, is_flagged_fraud SMALLINT, ingested_at TIMESTAMPTZ DEFAULT now());
