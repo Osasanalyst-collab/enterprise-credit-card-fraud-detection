@@ -52,3 +52,13 @@ balance_diff_dest = newbalanceDest - oldbalanceDest
 - `infrastructure/`: Docker, Kubernetes and Terraform templates
 - `tests/`: automated tests
 - `docs/`: architecture, data contract, deployment and monitoring guides
+
+## Interactive Streamlit application
+The repository includes a Streamlit Fraud Operations Center for executive monitoring, single-transaction scoring, CSV batch scoring, fraud analytics and model/data-quality monitoring.
+
+```bash
+pip install -r requirements.txt
+streamlit run dashboard/app.py
+```
+
+Open `http://localhost:8501` if the browser does not launch automatically.

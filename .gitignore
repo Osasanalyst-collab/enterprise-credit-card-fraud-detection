@@ -18,3 +18,13 @@ logs/*
 mlruns/
 *.db
 .DS_Store
+
+# Local development files
+.vscode/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+.coverage
+.env
+logs/
+dbt/logs/
